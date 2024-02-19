@@ -1,0 +1,9 @@
+- name: Restart IPsec
+  ansible.builtin.service:
+    name: ipsec
+    state: restarted
+
+- name: Enable IPsec
+  ansible.builtin.service:
+    name: ipsec
+    enabled: yes

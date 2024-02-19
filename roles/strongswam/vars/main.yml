@@ -1,0 +1,39 @@
+# # vars.yml
+
+# conns:
+#   - name: "conn1"
+#     left: "192.168.1.1"
+#     leftid: "left_id_1"
+#     leftsubnet: "192.168.2.0/24"
+#     right: "192.168.3.1"
+#     rightsubnet: "192.168.4.0/24"
+
+#   - name: "conn2"
+#     left: "192.168.1.2"
+#     leftid: "left_id_2"
+#     leftsubnet: "192.168.3.0/24"
+#     right: "192.168.5.1"
+#     rightsubnet: "192.168.6.0/24"
+
+#   - name: "conn3"
+#     left: "192.168.1.2"
+#     leftid: "left_id_2"
+#     leftsubnet: "192.168.3.0/24"
+#     right: "192.168.5.1"
+#     rightsubnet: "192.168.6.0/24"
+
+#   - name: "conn4"
+#     left: "192.168.1.2"
+#     leftid: "left_id_2"
+#     leftsubnet: "192.168.3.0/24"
+#     right: "192.168.5.1"
+#     rightsubnet: "192.168.6.0/24"
+
+# secrets:
+#   - left: "192.168.1.1"
+#     right: "192.168.3.1"
+#     psk: "secret_key_1"
+
+#   - left: "192.168.1.2"
+#     right: "192.168.5.1"
+#     psk: "secret_key_2"

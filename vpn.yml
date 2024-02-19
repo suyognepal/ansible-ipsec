@@ -1,0 +1,5 @@
+- hosts: local
+  become: true
+  remote_user: root
+  roles:
+    - strongswam

@@ -1,0 +1,27 @@
+- name: Copy IPsec configuration block to ipsec.conf
+  ansible.builtin.copy:
+    content: |
+      config setup
+          charondebug="ike 1, knl 1, cfg 0"
+          uniqueids=no
+
+      {% for conn in conns %}
+      conn {{ conn.name }}
+          auto=add
+          type=tunnel
+          authby=secret
+          esp=aes256-sha256-modp1536
+          ike=aes256-sha256-modp1536
+          keyexchange=ikev1
+          keyingtries=24
+          left={{ conn.left }}
+          leftid={{ conn.leftid }}
+          leftsubnet={{ conn.leftsubnet }}
+          right={{ conn.right }}
+          rightsubnet={{ conn.rightsubnet }}
+          keylife=1h
+          ikelifetime=1h
+          rekey=yes
+      {% endfor %}
+    dest: /etc/ipsec.conf
+    backup: yes

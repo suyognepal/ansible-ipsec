@@ -1,0 +1,6 @@
+# tasks file for vpn
+
+- import_tasks: install.yml
+- import_tasks: copyfiles-ipsec.conf.yml
+- import_tasks: copyfiles-ipsec.secrets.yml
+- import_tasks: handlers/main.yml
